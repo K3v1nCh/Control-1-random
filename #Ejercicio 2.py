@@ -8,11 +8,11 @@ def georeference(n):
 
     response= requests.get( 'https://jsonplaceholder.typicode.com/users' )
     consulta = json.loads(response.text)
-    resultado=[]
-    resultado.append(consulta[n]['name'])
-    resultado.append(consulta[n]['address']['geo']['lat'])
-    resultado.append(consulta[n]['address']['geo']['lng'])
+    R=[]
+    R.append(consulta[n]['name'])
+    R.append(consulta[n]['address']['geo']['lat'])
+    R.append(consulta[n]['address']['geo']['lng'])
     
     
-    return resultado
+    return R
 print(georeference(1))
